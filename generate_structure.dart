@@ -1,8 +1,10 @@
 import 'dart:io';
 
+import 'package:flutter/widgets.dart';
+
 void main(List<String> args) {
   if (args.isEmpty) {
-    print('❌ Please provide a screen name.\nUsage: dart generate_screen_structure.dart <screen_name>');
+    debugPrint('❌ Please provide a screen name.\nUsage: dart generate_screen_structure.dart <screen_name>');
     return;
   }
 
@@ -23,13 +25,13 @@ void main(List<String> args) {
     final dir = Directory(folder);
     if (!dir.existsSync()) {
       dir.createSync(recursive: true);
-      print('✅ Created: ${dir.path}');
+      debugPrint('✅ Created: ${dir.path}');
     } else {
-      print('⚠️ Already exists: ${dir.path}');
+      debugPrint('⚠️ Already exists: ${dir.path}');
     }
   }
 
-  print('\n🎉 Done setting up "$screenName" structure!');
+  debugPrint('\n🎉 Done setting up "$screenName" structure!');
 }
 
 // how too run
