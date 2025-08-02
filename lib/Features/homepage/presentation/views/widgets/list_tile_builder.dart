@@ -33,7 +33,7 @@ class ListTileBuilder extends StatelessWidget {
                   context.read<SelectedItemCubit>().selectItem(index);
                 },
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 20),
+                  padding: const EdgeInsets.only(top: 10),
                   child: DrawerItme(
                     item: items[index],
                     isActive:
