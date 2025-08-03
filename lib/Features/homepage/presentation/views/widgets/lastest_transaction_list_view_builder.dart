@@ -13,11 +13,17 @@ class LastestTransactionListViewBuilder extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
+    ScrollController scrollController = ScrollController();
     // Using SingleChildScrollView to allow horizontal scrolling 100% responsive but not recommended for performance if the list is large.
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: userInfoList.map((e) => IntrinsicWidth(child: UserInfo(userInfoModel: e))).toList(),
+    return Scrollbar(
+      controller: scrollController,
+      child: SingleChildScrollView(
+        padding: EdgeInsets.only(bottom: 20),
+        controller: scrollController,
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: userInfoList.map((e) => IntrinsicWidth(child: UserInfo(userInfoModel: e))).toList(),
+        ),
       ),
     );
     // Alternatively, you can use ListView.builder for better performance with large lists.

@@ -10,9 +10,6 @@ class ResponsiveDashboardApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple)),
-      home: const HomePage(),
-    );
+    return MaterialApp(home: const HomePage());
   }
 }
