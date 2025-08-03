@@ -36,6 +36,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_svg: ^2.2.0
   flutter_bloc: ^9.1.1
+  flutter_credit_card: ^4.1.0
+  expandable_page_view: ^1.0.17
+
 
 dev_dependencies:
   flutter_test:
