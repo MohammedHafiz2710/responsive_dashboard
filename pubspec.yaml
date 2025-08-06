@@ -38,6 +38,7 @@ dependencies:
   flutter_bloc: ^9.1.1
   flutter_credit_card: ^4.1.0
   expandable_page_view: ^1.0.17
+  bloc: ^9.0.0
 
 
 dev_dependencies:
