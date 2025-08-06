@@ -1,5 +1,7 @@
 import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:responsive_dashboard/Features/homepage/presentation/view%20models/dot_indicator_cubit/dot_indicator_cubit.dart';
 import 'package:responsive_dashboard/Features/homepage/presentation/views/widgets/custom_credit_card.dart';
 
 class MyCardsPageView extends StatelessWidget {
@@ -13,6 +15,9 @@ class MyCardsPageView extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(bottom: 16),
         child: ExpandablePageView(
+          onPageChanged: (value) {
+            context.read<DotIndicatorCubit>().selectCard(value);
+          },
           controller: pageController,
           scrollDirection: Axis.horizontal,
           physics: BouncingScrollPhysics(),
