@@ -9,22 +9,16 @@ class MyCardAndTransactionSections extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 40),
-      child: Container(
-        decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16)),
-
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 24),
-          child: Column(
-            children: [
-              MyCardSection(),
-              Divider(height: 30),
-              TransactionSection(),
-              SizedBox(height: 16),
-              Expanded(child: IncomeSection()),
-            ],
+      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 24),
+      child: Column(
+        children: [
+          Container(
+            decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12)),
+            child: Column(children: [MyCardSection(), Divider(height: 30), TransactionSection(), SizedBox(height: 16)]),
           ),
-        ),
+          SizedBox(height: 16),
+          Expanded(child: IncomeSection()),
+        ],
       ),
     );
   }

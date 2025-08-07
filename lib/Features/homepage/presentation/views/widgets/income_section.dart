@@ -10,9 +10,9 @@ class IncomeSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12)),
-      padding: EdgeInsets.all(20),
       child: Column(
         children: [
+          SizedBox(height: 16),
           AllExpensessHeaderAndIncome(title: 'Income'),
           Row(
             children: [
