@@ -8,16 +8,20 @@ class IncomeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        AllExpensessHeaderAndIncome(title: 'Income'),
-        Row(
-          children: [
-            Expanded(child: IncomeChart()),
-            Expanded(child: IncomeDetails()),
-          ],
-        ),
-      ],
+    return Container(
+      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12)),
+      padding: EdgeInsets.all(20),
+      child: Column(
+        children: [
+          AllExpensessHeaderAndIncome(title: 'Income'),
+          Row(
+            children: [
+              Expanded(child: IncomeChart()),
+              Expanded(child: IncomeDetails()),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

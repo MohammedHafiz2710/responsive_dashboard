@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_dashboard/Core/utils/app_styles.dart';
@@ -12,15 +13,19 @@ class MyCardSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => DotIndicatorCubit(),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text("My Card", style: AppStyles.styleSemiBold20),
-          SizedBox(height: 12),
-          MyCardsPageView(),
-          SizedBox(height: 12),
-          DotsIndicator(),
-        ],
+      child: Container(
+        decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12)),
+        padding: EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("My Card", style: AppStyles.styleSemiBold20),
+            SizedBox(height: 12),
+            MyCardsPageView(),
+            SizedBox(height: 12),
+            DotsIndicator(),
+          ],
+        ),
       ),
     );
   }
