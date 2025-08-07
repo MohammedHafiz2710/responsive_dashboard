@@ -13,7 +13,7 @@ class MyCardsPageView extends StatelessWidget {
     return Scrollbar(
       controller: pageController,
       child: Padding(
-        padding: const EdgeInsets.only(bottom: 16),
+        padding: const EdgeInsets.only(bottom: 12),
         child: ExpandablePageView(
           onPageChanged: (value) {
             context.read<DotIndicatorCubit>().selectCard(value);

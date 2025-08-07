@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/Features/homepage/presentation/views/widgets/income_section.dart';
 import 'package:responsive_dashboard/Features/homepage/presentation/views/widgets/my_card_section.dart';
 import 'package:responsive_dashboard/Features/homepage/presentation/views/widgets/transaction_section.dart';
 
@@ -12,7 +13,15 @@ class MyCardAndTransactionSections extends StatelessWidget {
 
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 24),
-        child: Column(children: [MyCardSection(), Divider(height: 40), TransactionSection()]),
+        child: Column(
+          children: [
+            MyCardSection(),
+            Divider(height: 30),
+            TransactionSection(),
+            SizedBox(height: 16),
+            Expanded(child: IncomeSection()),
+          ],
+        ),
       ),
     );
   }

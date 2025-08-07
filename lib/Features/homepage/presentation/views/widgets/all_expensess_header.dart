@@ -1,21 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/Core/utils/app_styles.dart';
 
-class AllExpensessHeader extends StatelessWidget {
-  const AllExpensessHeader({super.key});
+class AllExpensessHeaderAndIncome extends StatelessWidget {
+  final String title;
+  const AllExpensessHeaderAndIncome({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text("All Expensess", style: AppStyles.styleSemiBold20),
+        Text(title, style: AppStyles.styleSemiBold20),
 
         Container(
           padding: EdgeInsets.all(4),
-          decoration: BoxDecoration(
-            border: Border.all(color: Color(0xff064061)),
-            borderRadius: BorderRadius.circular(8),
+          decoration: ShapeDecoration(
+            color: Colors.white,
+            shape: RoundedRectangleBorder(
+              side: BorderSide(width: 1, color: const Color(0xFFF1F1F1)),
+              borderRadius: BorderRadius.circular(12),
+            ),
           ),
           child: DropdownButton(
             icon: Padding(

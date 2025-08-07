@@ -5,7 +5,6 @@ import 'package:responsive_dashboard/Features/homepage/presentation/views/widget
 class TransactionListViewBuilder extends StatelessWidget {
   const TransactionListViewBuilder({super.key});
 
-  @override
   static const List<TransactionInfoModel> transactions = [
     TransactionInfoModel(title: 'Cash Withdrawal', date: '13 Apr, 2022 ', amount: '20,129', isWithdrawal: true),
     TransactionInfoModel(
@@ -21,6 +20,7 @@ class TransactionListViewBuilder extends StatelessWidget {
       isWithdrawal: false,
     ),
   ];
+  @override
   Widget build(BuildContext context) {
     return ListView.builder(
       shrinkWrap: true,

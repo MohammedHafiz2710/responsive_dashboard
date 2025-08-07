@@ -9,7 +9,7 @@ class CustomCreditCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 415 / 220,
+      aspectRatio: 420 / 190,
       child: CreditCardWidget(
         padding: 0,
         isChipVisible: true,

@@ -12,7 +12,13 @@ class AllExpenses extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12)),
       padding: EdgeInsets.all(20),
-      child: Column(children: [AllExpensessHeader(), SizedBox(height: 16), AllExpensessItemListViewBuilder()]),
+      child: Column(
+        children: [
+          AllExpensessHeaderAndIncome(title: 'All Expenses'),
+          SizedBox(height: 16),
+          AllExpensessItemListViewBuilder(),
+        ],
+      ),
     );
   }
 }

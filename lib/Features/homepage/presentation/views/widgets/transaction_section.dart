@@ -8,17 +8,15 @@ class TransactionSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          TransactionHeader(),
-          SizedBox(height: 20),
-          Text("13 April 2022", style: AppStyles.styleRegular16),
-          SizedBox(height: 16),
-          TransactionListViewBuilder(),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        TransactionHeader(),
+        SizedBox(height: 8),
+        Text("13 April 2022", style: AppStyles.styleRegular16),
+        SizedBox(height: 12),
+        TransactionListViewBuilder(),
+      ],
     );
   }
 }
