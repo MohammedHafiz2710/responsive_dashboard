@@ -1,6 +1,7 @@
 import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:responsive_dashboard/Core/utils/size_config.dart';
 import 'package:responsive_dashboard/Features/homepage/presentation/view%20models/dot_indicator_cubit/dot_indicator_cubit.dart';
 import 'package:responsive_dashboard/Features/homepage/presentation/views/widgets/custom_credit_card.dart';
 
@@ -11,6 +12,7 @@ class MyCardsPageView extends StatelessWidget {
   Widget build(BuildContext context) {
     PageController pageController = PageController();
     return Scrollbar(
+      thickness: MediaQuery.sizeOf(context).width < SizeConfig.desktopBreakPoint ? 0 : 6,
       controller: pageController,
       child: Padding(
         padding: const EdgeInsets.only(bottom: 12),

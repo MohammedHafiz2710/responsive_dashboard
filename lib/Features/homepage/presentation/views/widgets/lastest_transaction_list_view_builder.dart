@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/Core/utils/assets_data.dart';
+import 'package:responsive_dashboard/Core/utils/size_config.dart';
 import 'package:responsive_dashboard/Features/homepage/data/models/uswe_info_model.dart';
 import 'package:responsive_dashboard/Features/homepage/presentation/views/widgets/user_info.dart';
 
@@ -16,6 +17,8 @@ class LastestTransactionListViewBuilder extends StatelessWidget {
     ScrollController scrollController = ScrollController();
     // Using SingleChildScrollView to allow horizontal scrolling 100% responsive but not recommended for performance if the list is large.
     return Scrollbar(
+      thickness: MediaQuery.sizeOf(context).width < SizeConfig.desktopBreakPoint ? 0 : 6,
+
       controller: scrollController,
       child: SingleChildScrollView(
         padding: EdgeInsets.only(bottom: 20),

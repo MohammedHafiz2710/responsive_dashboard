@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_dashboard/Core/utils/app_styles.dart';
 import 'package:responsive_dashboard/Features/homepage/presentation/view%20models/dot_indicator_cubit/dot_indicator_cubit.dart';
