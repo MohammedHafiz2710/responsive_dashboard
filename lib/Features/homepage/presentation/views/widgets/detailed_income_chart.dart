@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/Core/utils/app_styles.dart';
@@ -19,7 +21,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
 
   PieChartData getChartData() {
     return PieChartData(
-      centerSpaceRadius: 90,
+      centerSpaceRadius: MediaQuery.sizeOf(context).width >= 1300 ? null : 30,
       pieTouchData: PieTouchData(
         enabled: true,
         touchCallback: (p0, pieTouchResponse) {

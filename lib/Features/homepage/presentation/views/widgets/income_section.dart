@@ -10,22 +10,19 @@ class IncomeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 1,
-      child: Container(
-        decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12)),
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-              child: AllExpensessHeaderAndIncome(title: 'Income'),
-            ),
-            Flexible(
-              flex: MediaQuery.sizeOf(context).width < SizeConfig.desktopBreakPoint ? 0 : 1,
-              child: IncomeSectionBody(),
-            ),
-          ],
-        ),
+    return Container(
+      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12)),
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+            child: AllExpensessHeaderAndIncome(title: 'Income'),
+          ),
+          Flexible(
+            flex: MediaQuery.sizeOf(context).width < SizeConfig.desktopBreakPoint ? 0 : 1,
+            child: IncomeSectionBody(),
+          ),
+        ],
       ),
     );
   }

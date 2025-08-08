@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/Features/homepage/presentation/views/home_page.dart';
 
@@ -10,6 +12,7 @@ class ResponsiveDashboardApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    log(MediaQuery.sizeOf(context).width.toString());
     return MaterialApp(home: const HomePage());
   }
 }

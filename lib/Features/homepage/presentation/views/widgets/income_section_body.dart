@@ -9,7 +9,7 @@ class IncomeSectionBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.sizeOf(context).width;
+    final width = MediaQuery.sizeOf(context).width;
     return width >= SizeConfig.desktopBreakPoint && width < 1750
         ? Row(children: [Expanded(child: DetailedIncomeChart())])
         : Row(
