@@ -12,7 +12,7 @@ class CustomTextField extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title, style: AppStyles.styleMedium16),
+          Text(title, style: AppStyles.styleMedium16(context)),
           SizedBox(height: 12),
           TextField(
             cursorColor: Color(0xff4EB7F2),
@@ -22,7 +22,7 @@ class CustomTextField extends StatelessWidget {
 
               border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none),
               hintText: "Type $title",
-              hintStyle: AppStyles.styleRegular16.copyWith(color: Color(0xffAAAAAA)),
+              hintStyle: AppStyles.styleRegular16(context).copyWith(color: Color(0xffAAAAAA)),
               contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             ),
           ),

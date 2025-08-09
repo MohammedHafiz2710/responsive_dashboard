@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/Core/utils/app_styles.dart';
@@ -32,7 +30,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
 
       sections: [
         PieChartSectionData(
-          titleStyle: AppStyles.styleSemiBold16.copyWith(color: activeIndex == 0 ? null : Colors.white),
+          titleStyle: AppStyles.styleSemiBold16(context).copyWith(color: activeIndex == 0 ? null : Colors.white),
           color: Color(0xff208CC8),
           titlePositionPercentageOffset: activeIndex == 0 ? 1.5 : null,
           title: activeIndex == 0 ? "Design service" : "40%",
@@ -40,7 +38,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
           radius: activeIndex == 0 ? 60 : 50,
         ),
         PieChartSectionData(
-          titleStyle: AppStyles.styleSemiBold16.copyWith(color: activeIndex == 1 ? null : Colors.white),
+          titleStyle: AppStyles.styleSemiBold16(context).copyWith(color: activeIndex == 1 ? null : Colors.white),
           color: Color(0xff4EB7F2),
           titlePositionPercentageOffset: activeIndex == 1 ? 2.1 : null,
           title: activeIndex == 1 ? "Design product" : "25%",
@@ -48,7 +46,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
           radius: activeIndex == 1 ? 60 : 50,
         ),
         PieChartSectionData(
-          titleStyle: AppStyles.styleSemiBold16.copyWith(color: activeIndex == 2 ? null : Colors.white),
+          titleStyle: AppStyles.styleSemiBold16(context).copyWith(color: activeIndex == 2 ? null : Colors.white),
           color: Color(0xff064061),
           titlePositionPercentageOffset: activeIndex == 2 ? 1.5 : null,
           title: activeIndex == 2 ? "Product royalti" : "20%",
@@ -56,11 +54,11 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
           radius: activeIndex == 2 ? 60 : 50,
         ),
         PieChartSectionData(
-          titleStyle: AppStyles.styleSemiBold16.copyWith(color: activeIndex == 3 ? null : Colors.white),
+          titleStyle: AppStyles.styleSemiBold16(context).copyWith(color: activeIndex == 3 ? null : Colors.white),
           color: Color(0xffE2DECD),
           titlePositionPercentageOffset: activeIndex == 3 ? 1.5 : null,
-          title: activeIndex == 3 ? "Other" : "22%",
-          value: 22,
+          title: activeIndex == 3 ? "Other" : "15%",
+          value: 15,
           radius: activeIndex == 3 ? 60 : 50,
         ),
       ],

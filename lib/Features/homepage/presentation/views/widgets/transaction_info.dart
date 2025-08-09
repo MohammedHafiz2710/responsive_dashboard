@@ -16,11 +16,11 @@ class TransactionInfo extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
       child: ListTile(
-        title: Text(transactionInfo.title, style: AppStyles.styleSemiBold20),
-        subtitle: Text(transactionInfo.date, style: AppStyles.styleRegular16.copyWith(color: Color(0xFFAAAAAA))),
+        title: Text(transactionInfo.title, style: AppStyles.styleSemiBold20(context)),
+        subtitle: Text(transactionInfo.date, style: AppStyles.styleRegular16(context).copyWith(color: Color(0xFFAAAAAA))),
         trailing: Text(
           "\$${transactionInfo.amount}",
-          style: AppStyles.styleSemiBold20.copyWith(
+          style: AppStyles.styleSemiBold20(context).copyWith(
             color: transactionInfo.isWithdrawal ? Color(0xFFEF5350) : Color(0xFF7CD87A),
           ),
         ),

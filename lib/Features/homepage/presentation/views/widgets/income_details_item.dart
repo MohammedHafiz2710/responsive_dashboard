@@ -14,8 +14,8 @@ class IncomeDetailsItem extends StatelessWidget {
         height: 12,
         decoration: ShapeDecoration(color: item.color, shape: OvalBorder()),
       ),
-      title: Text(item.title, style: AppStyles.styleRegular16),
-      trailing: Text(item.percentage, style: AppStyles.styleMedium16),
+      title: Text(item.title, style: AppStyles.styleRegular16(context)),
+      trailing: Text(item.percentage, style: AppStyles.styleMedium16(context)),
     );
   }
 }

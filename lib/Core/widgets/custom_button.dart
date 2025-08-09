@@ -21,7 +21,7 @@ class CustomButton extends StatelessWidget {
           overlayColor: Colors.grey.shade100,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
-        child: Text(title, style: AppStyles.styleSemiBold18.copyWith(color: titleColor)),
+        child: Text(title, style: AppStyles.styleSemiBold18(context).copyWith(color: titleColor)),
       ),
     );
   }

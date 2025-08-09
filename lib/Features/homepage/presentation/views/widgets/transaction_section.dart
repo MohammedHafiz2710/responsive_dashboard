@@ -16,7 +16,7 @@ class TransactionSection extends StatelessWidget {
         children: [
           TransactionHeader(),
           SizedBox(height: 8),
-          Text("13 April 2022", style: AppStyles.styleRegular16),
+          Text("13 April 2022", style: AppStyles.styleRegular16(context)),
           SizedBox(height: 12),
           TransactionListViewBuilder(),
         ],

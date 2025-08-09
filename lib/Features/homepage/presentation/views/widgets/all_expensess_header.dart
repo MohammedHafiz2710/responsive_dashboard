@@ -10,7 +10,7 @@ class AllExpensessHeaderAndIncome extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(title, style: AppStyles.styleSemiBold20),
+        Text(title, style: AppStyles.styleSemiBold20(context)),
 
         Container(
           padding: EdgeInsets.all(4),
@@ -28,7 +28,7 @@ class AllExpensessHeaderAndIncome extends StatelessWidget {
             ),
             dropdownColor: Colors.white,
             underline: SizedBox(),
-            style: AppStyles.styleMedium16,
+            style: AppStyles.styleMedium16(context),
             value: "Monthly",
             items: [
               DropdownMenuItem(value: "Monthly", child: Text("Monthly")),

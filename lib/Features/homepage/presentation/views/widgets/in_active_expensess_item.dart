@@ -27,11 +27,11 @@ class InActiveExpensessItem extends StatelessWidget {
           SizedBox(height: 34),
           Column(
             children: [
-              Text(item.title, style: AppStyles.styleSemiBold16),
+              Text(item.title, style: AppStyles.styleSemiBold16(context)),
               SizedBox(height: 8),
-              Text(item.subtitle, style: AppStyles.styleRegular14),
+              Text(item.subtitle, style: AppStyles.styleRegular14(context)),
               SizedBox(height: 16),
-              Text("\$${item.amount}", style: AppStyles.styleSemiBold24),
+              Text("\$${item.amount}", style: AppStyles.styleSemiBold24(context)),
             ],
           ),
         ],
@@ -64,11 +64,11 @@ class ActiveExpensessItem extends StatelessWidget {
           SizedBox(height: 34),
           Column(
             children: [
-              Text(item.title, style: AppStyles.styleSemiBold16.copyWith(color: Colors.white)),
+              Text(item.title, style: AppStyles.styleSemiBold16(context).copyWith(color: Colors.white)),
               SizedBox(height: 8),
-              Text(item.subtitle, style: AppStyles.styleRegular14.copyWith(color: Colors.white)),
+              Text(item.subtitle, style: AppStyles.styleRegular14(context).copyWith(color: Colors.white)),
               SizedBox(height: 16),
-              Text("\$${item.amount}", style: AppStyles.styleSemiBold24.copyWith(color: Colors.white)),
+              Text("\$${item.amount}", style: AppStyles.styleSemiBold24(context).copyWith(color: Colors.white)),
             ],
           ),
         ],
