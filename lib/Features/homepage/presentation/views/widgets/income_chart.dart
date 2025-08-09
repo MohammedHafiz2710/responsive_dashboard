@@ -18,7 +18,6 @@ class _IncomeChartState extends State<IncomeChart> {
 
   PieChartData getChartData() {
     return PieChartData(
-      centerSpaceRadius: 70,
       pieTouchData: PieTouchData(
         enabled: true,
         touchCallback: (p0, pieTouchResponse) {
@@ -28,10 +27,10 @@ class _IncomeChartState extends State<IncomeChart> {
       ),
 
       sections: [
-        PieChartSectionData(color: Color(0xff208CC8), value: 40, showTitle: false, radius: activeIndex == 0 ? 60 : 50),
-        PieChartSectionData(color: Color(0xff4EB7F2), value: 25, showTitle: false, radius: activeIndex == 1 ? 60 : 50),
-        PieChartSectionData(color: Color(0xff064061), value: 20, showTitle: false, radius: activeIndex == 2 ? 60 : 50),
-        PieChartSectionData(color: Color(0xffE2DECD), value: 15, showTitle: false, radius: activeIndex == 3 ? 60 : 50),
+        PieChartSectionData(color: Color(0xff208CC8), value: 40, showTitle: false, radius: activeIndex == 0 ? 50 : 40),
+        PieChartSectionData(color: Color(0xff4EB7F2), value: 25, showTitle: false, radius: activeIndex == 1 ? 50 : 40),
+        PieChartSectionData(color: Color(0xff064061), value: 20, showTitle: false, radius: activeIndex == 2 ? 50 : 40),
+        PieChartSectionData(color: Color(0xffE2DECD), value: 15, showTitle: false, radius: activeIndex == 3 ? 50 : 40),
       ],
     );
   }
