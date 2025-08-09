@@ -29,12 +29,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
           setState(() {});
         },
       ),
-      // static const List<IncomeDetailsModel> itemDetailsModel = [
-      //   IncomeDetailsModel(title: 'Design service', percentage: '40%', color: Color(0xFF208BC7)),
-      //   IncomeDetailsModel(title: 'Design product', percentage: '25%', color: Color(0xFF4DB7F2)),
-      //   IncomeDetailsModel(title: 'Product royalti', percentage: '20%', color: Color(0xFF064060)),
-      //   IncomeDetailsModel(title: 'Other', percentage: '22%', color: Color(0xFFE2DECD)),
-      // ];
+
       sections: [
         PieChartSectionData(
           titleStyle: AppStyles.styleSemiBold16.copyWith(color: activeIndex == 0 ? null : Colors.white),

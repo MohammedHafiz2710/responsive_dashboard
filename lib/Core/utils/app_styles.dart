@@ -1,64 +1,89 @@
+import 'dart:ui';
+
 import 'package:flutter/widgets.dart';
+import 'package:responsive_dashboard/Core/utils/size_config.dart';
 
 abstract class AppStyles {
-  static const TextStyle styleRegular12 = TextStyle(
+  static TextStyle styleRegular12 = TextStyle(
     color: Color(0xffAAAAAA),
-    fontSize: 12,
+    fontSize: getResponsiveFontSize(12),
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w400,
   );
-  static const TextStyle styleRegular14 = TextStyle(
+  static TextStyle styleRegular14 = TextStyle(
     color: Color(0xffAAAAAA),
-    fontSize: 14,
+    fontSize: getResponsiveFontSize(14),
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w400,
   );
-  static const TextStyle styleRegular16 = TextStyle(
+  static TextStyle styleRegular16 = TextStyle(
     color: Color(0xFF064060),
-    fontSize: 16,
+    fontSize: getResponsiveFontSize(16),
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w400,
   );
-  static const TextStyle styleMedium16 = TextStyle(
+  static TextStyle styleMedium16 = TextStyle(
     color: Color(0xFF064060),
-    fontSize: 16,
+    fontSize: getResponsiveFontSize(16),
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w500,
   );
-  static const TextStyle styleMedium20 = TextStyle(
+  static TextStyle styleMedium20 = TextStyle(
     color: Color(0xFFFFFFFF),
-    fontSize: 20,
+    fontSize: getResponsiveFontSize(20),
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w500,
   );
-  static const TextStyle styleSemiBold16 = TextStyle(
+  static TextStyle styleSemiBold16 = TextStyle(
     color: Color(0xFF064060),
-    fontSize: 16,
+    fontSize: getResponsiveFontSize(16),
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,
   );
-  static const TextStyle styleSemiBold18 = TextStyle(
+  static TextStyle styleSemiBold18 = TextStyle(
     color: Color(0xFF4EB7F2),
-    fontSize: 18,
+    fontSize: getResponsiveFontSize(18),
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,
   );
-  static const TextStyle styleSemiBold20 = TextStyle(
+  static TextStyle styleSemiBold20 = TextStyle(
     color: Color(0xFF064060),
-    fontSize: 20,
+    fontSize: getResponsiveFontSize(20),
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,
   );
-  static const TextStyle styleSemiBold24 = TextStyle(
+  static TextStyle styleSemiBold24 = TextStyle(
     color: Color(0xFF4EB7F2),
-    fontSize: 24,
+    fontSize: getResponsiveFontSize(24),
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,
   );
-  static const TextStyle styleBold16 = TextStyle(
+  static TextStyle styleBold16 = TextStyle(
     color: Color(0xFF4EB7F2),
-    fontSize: 16,
+    fontSize: getResponsiveFontSize(16),
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,
   );
+}
+
+double getResponsiveFontSize(double fontSize) {
+  double scaleFactor = getScaleFactor();
+  double responsiveSize = fontSize * scaleFactor;
+  double lowerLimit = fontSize * 0.8;
+  double upperLimit = fontSize * 1.2;
+  return responsiveSize.clamp(lowerLimit, upperLimit);
+}
+
+double getScaleFactor() {
+  var dispatcher = PlatformDispatcher.instance;
+  var physicalWidth = dispatcher.views.first.physicalSize.width;
+  var devicePixelRatio = dispatcher.views.first.devicePixelRatio;
+  var width = physicalWidth / devicePixelRatio;
+  if (width < SizeConfig.tabletBreakPoint) {
+    return width / 550;
+  } else if (width < SizeConfig.desktopBreakPoint) {
+    return width / 1000;
+  } else {
+    return width / 1920;
+  }
 }
