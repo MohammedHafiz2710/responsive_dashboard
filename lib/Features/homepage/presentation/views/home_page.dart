@@ -16,6 +16,7 @@ class HomePage extends StatelessWidget {
       drawer: MediaQuery.sizeOf(context).width < 800 ? CustomDrawer() : null,
       appBar: MediaQuery.sizeOf(context).width < 800
           ? AppBar(
+              surfaceTintColor: Colors.transparent,
               leading: IconButton(
                 onPressed: () {
                   scaffoldKey.currentState!.openDrawer();

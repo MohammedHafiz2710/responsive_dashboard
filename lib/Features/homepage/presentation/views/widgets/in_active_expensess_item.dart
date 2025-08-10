@@ -27,11 +27,20 @@ class InActiveExpensessItem extends StatelessWidget {
           SizedBox(height: 34),
           Column(
             children: [
-              Text(item.title, style: AppStyles.styleSemiBold16(context)),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(item.title, style: AppStyles.styleSemiBold16(context)),
+              ),
               SizedBox(height: 8),
-              Text(item.subtitle, style: AppStyles.styleRegular14(context)),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(item.subtitle, style: AppStyles.styleRegular14(context)),
+              ),
               SizedBox(height: 16),
-              Text("\$${item.amount}", style: AppStyles.styleSemiBold24(context)),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text("\$${item.amount}", style: AppStyles.styleSemiBold24(context)),
+              ),
             ],
           ),
         ],
@@ -64,11 +73,23 @@ class ActiveExpensessItem extends StatelessWidget {
           SizedBox(height: 34),
           Column(
             children: [
-              Text(item.title, style: AppStyles.styleSemiBold16(context).copyWith(color: Colors.white)),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(item.title, style: AppStyles.styleSemiBold16(context).copyWith(color: Colors.white)),
+              ),
               SizedBox(height: 8),
-              Text(item.subtitle, style: AppStyles.styleRegular14(context).copyWith(color: Colors.white)),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(item.subtitle, style: AppStyles.styleRegular14(context).copyWith(color: Colors.white)),
+              ),
               SizedBox(height: 16),
-              Text("\$${item.amount}", style: AppStyles.styleSemiBold24(context).copyWith(color: Colors.white)),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  "\$${item.amount}",
+                  style: AppStyles.styleSemiBold24(context).copyWith(color: Colors.white),
+                ),
+              ),
             ],
           ),
         ],

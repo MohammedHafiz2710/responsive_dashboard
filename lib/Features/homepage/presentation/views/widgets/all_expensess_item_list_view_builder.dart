@@ -17,8 +17,8 @@ class AllExpensessItemListViewBuilder extends StatelessWidget {
     return BlocProvider(
       create: (context) => SelecetdItemExpensesCubit(),
       child: Row(
-        spacing: 12,
         // old solution
+        spacing: 12,
         children: items.asMap().entries.map((e) {
           int index = e.key;
           var item = e.value;

@@ -14,7 +14,10 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(aspectRatio: 1, child: PieChart(getChartData()));
+    return ConstrainedBox(
+      constraints: BoxConstraints(maxHeight: 250, maxWidth: 250),
+      child: AspectRatio(aspectRatio: 1, child: PieChart(getChartData())),
+    );
   }
 
   PieChartData getChartData() {
